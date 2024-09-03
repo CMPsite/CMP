@@ -14,8 +14,15 @@ header {
     overflow: hidden;
 }
 
+/* 動画コンテナ */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #background-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,6 +31,18 @@ header {
     z-index: -1; /* 背景に設定 */
 }
 
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    display: none; /* デフォルトでは非表示 */
+}
+
+/* ヒーローセクション */
 .hero {
     position: relative;
     z-index: 1;
@@ -54,7 +73,6 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-wrap: nowrap; /* 一行に表示 */
 }
 
 nav li {
@@ -84,7 +102,7 @@ section h2 {
     text-align: center;
 }
 
-/* サービスのスタイル */
+/* サービス一覧のスタイル */
 .service-list {
     display: flex;
     flex-wrap: wrap;
@@ -127,22 +145,25 @@ th {
 /* ワークフローのスタイル */
 .workflow-steps {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* ステップ間のスペース */
+    gap: 20px;
 }
 
 .step {
-    flex: 1 1 200px;
+    flex: 1 1 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.step h3 {
-    margin-top: 0;
+.step-box {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
 }
 
 /* 会社概要のスタイル */
@@ -153,9 +174,7 @@ th {
 
 /* チームメンバーセクション */
 .team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .team h3 {
@@ -165,23 +184,22 @@ th {
 
 .team-members {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .team-member {
     text-align: center;
-    flex: 1 1 250px;
-    margin: 10px;
+    flex: 1 1 auto;
+    max-width: 200px;
 }
 
 .team-member img {
-    width: 150px; /* 写真の幅を150pxに設定 */
-    height: auto; /* 高さを自動調整 */
-    border-radius: 10px; /* 角を少し丸くする */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin-bottom: 10px;
-    object-fit: cover; /* 写真の内容が切れないように調整 */
 }
 
 /* お問い合わせのスタイル */
@@ -235,9 +253,4 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: #fff;
-}
-
-/* スムーズスクロールの追加 */
-html {
-    scroll-behavior: smooth;
 }
