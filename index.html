@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホームページ制作会社</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <video autoplay muted loop id="background-video">
+            <source src="images/3251737-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero">
+            <h1>CM Personal Site</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#about">会社概要</a></li>
+                <li><a href="#pricing">料金</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- サービスセクション -->
+    <section id="services">
+        <h2>サービス概要</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>ウェブデザイン</h3>
+                <p>魅力的で使いやすいデザインを提供します。</p>
+            </div>
+            <div class="service-item">
+                <h3>コーディング</h3>
+                <p>高品質なHTML/CSS/JavaScriptで実装します。</p>
+            </div>
+            <div class="service-item">
+                <h3>SEO対策</h3>
+                <p>検索エンジンでの上位表示を目指します。</p>
+            </div>
+            <div class="service-item">
+                <h3>レスポンシブデザイン</h3>
+                <p>あらゆるデバイスに対応します。</p>
+            </div>
+            <div class="service-item">
+                <h3>ECサイト構築</h3>
+                <p>オンラインショップを作成します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- パッケージと料金 -->
+    <section id="pricing">
+        <h2>パッケージと料金</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>プラン</th>
+                    <th>価格</th>
+                    <th>詳細</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>基本プラン</td>
+                    <td>¥50,000</td>
+                    <td>基本的なウェブサイト構築</td>
+                </tr>
+                <tr>
+                    <td>ビジネスプラン</td>
+                    <td>¥100,000</td>
+                    <td>追加機能とSEO対策</td>
+                </tr>
+                <tr>
+                    <td>プレミアムプラン</td>
+                    <td>¥200,000</td>
+                    <td>フルカスタマイズとサポート</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ワークフロー -->
+    <section id="workflow">
+        <h2>ワークフロー</h2>
+        <div class="workflow-steps">
+            <div class="step">
+                <h3>1. お問い合わせ</h3>
+                <p>最初にご相談いただきます。</p>
+            </div>
+            <div class="step">
+                <h3>2. 見積もり</h3>
+                <p>お見積りを提出します。</p>
+            </div>
+            <div class="step">
+                <h3>3. デザイン案の作成</h3>
+                <p>デザインのプロトタイプを作成します。</p>
+            </div>
+            <div class="step">
+                <h3>4. コーディング</h3>
+                <p>ウェブサイトを実際に構築します。</p>
+            </div>
+            <div class="step">
+                <h3>5. 納品</h3>
+                <p>完成したウェブサイトを納品します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要 -->
+    <section id="about">
+        <h2>会社概要</h2>
+        <div class="company-info">
+            <p><strong>設立年:</strong> 2024年</p>
+            <p><strong>所在地:</strong> 愛知県安城市</p>
+            <p><strong>ミッション:</strong> 飲食店様の業績向上の手助け</p>
+        </div>
+        <!-- チームメンバーセクション -->
+        <div class="team">
+            <h3>チームメンバー</h3>
+            <div class="team-member">
+                <img src="images/IMG_0001.jpeg" alt="メンバー1">
+                <div>
+                    <p><strong>名前:</strong> 向井　俊介</p>
+                    <p><strong>役職:</strong> 社長</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/IMG_0001.jpeg" alt="メンバー2">
+                <div>
+                    <p><strong>名前:</strong> 向井　俊介</p>
+                    <p><strong>役職:</strong> 社長の舎弟</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact">
+        <h2>お問い合わせ</h2>
+        <form>
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email">
+            <label for="phone">電話番号:</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">送信</button>
+        </form>
+        <div class="map">
+            <h3>所在地</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1634.7183833194938!2d137.08795803698763!3d34.97072301082121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004990f5f042249%3A0xb4917b34bffa63f8!2z5a6J5Z-O5biC56uLIOWuieWfjuWMl-S4reWtpuagoQ!5e0!3m2!1sja!2sjp!4v1725386547167!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2024 ホームページ制作会社. All rights reserved.</p>
+    </footer>
+</body>
+</html>
