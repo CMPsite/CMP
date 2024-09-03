@@ -54,6 +54,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-wrap: nowrap; /* 一行に表示 */
 }
 
 nav li {
@@ -83,6 +84,7 @@ section h2 {
     text-align: center;
 }
 
+/* サービスのスタイル */
 .service-list {
     display: flex;
     flex-wrap: wrap;
@@ -125,19 +127,18 @@ th {
 /* ワークフローのスタイル */
 .workflow-steps {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* ステップ間のスペース */
 }
 
 .step {
-    margin: 20px;
+    flex: 1 1 200px;
     padding: 20px;
-    border: 2px solid #ddd; /* 枠の色 */
-    border-radius: 8px; /* 角を少し丸くする */
+    background: #f9f9f9;
+    border-radius: 8px;
     text-align: center;
-    background: #f9f9f9; /* 背景色 */
-    width: 80%; /* 幅を指定 */
-    max-width: 600px; /* 最大幅を指定 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .step h3 {
@@ -152,30 +153,31 @@ th {
 
 /* チームメンバーセクション */
 .team {
-    padding: 80px 20px;
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.team h2 {
-    font-size: 2.5rem;
+.team h3 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .team-members {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* メンバー間のスペース */
+    justify-content: center;
+    gap: 20px;
 }
 
 .team-member {
     text-align: center;
-    flex: 1 1 250px; /* 幅を指定し、サイズ調整 */
+    flex: 1 1 250px;
+    margin: 10px;
 }
 
 .team-member img {
-    width: 200px; /* 写真の幅を200pxに設定 */
+    width: 150px; /* 写真の幅を150pxに設定 */
     height: auto; /* 高さを自動調整 */
     border-radius: 10px; /* 角を少し丸くする */
     margin-bottom: 10px;
@@ -233,4 +235,9 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: #fff;
+}
+
+/* スムーズスクロールの追加 */
+html {
+    scroll-behavior: smooth;
 }
